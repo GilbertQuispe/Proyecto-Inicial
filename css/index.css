@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;     */
+    font-family: "Circular";    
+    
+}
+.container_principal{
+    width: 100vw;
+    height: 100vh;    
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+.Registro{
+    display: inherit;
+    grid-template-rows:10% 85% 5%;    
+}
+
+.hearder_P{
+    grid-area:1/1/2/2;
+    display: inherit;    
+    grid-template-columns: repeat(2, 50%);    
+    align-items: center;
+    padding-left: 5%;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.main_P{
+    place-content: center;
+    grid-area: 2/1/3/2;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0 auto;
+}
+.footer_P{
+    grid-area: 3/1/4/2;
+    display: inherit;
+    grid-template-columns: repeat(2, 50%);    
+    align-items: center;
+    padding-left: 5%;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.section_m{
+    text-align: center;    
+    justify-content: center;
+}
+
+.botones_registro{
+    width: 100%;
+    height: 30%;
+    display: grid;    
+    grid-template-columns: repeat(4, 25%);
+    place-content: center;
+}
+.section_form{
+    display: flex;
+    justify-content: center;    
+}
+form{
+    display: grid;
+    row-gap: 20%;    
+    justify-content: center;
+    flex-direction: column;    
+    width: 50%;
+}
+.form_ingreso{
+    height: 3rem;
+}
+.Boton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.icon_reg{
+    width: 50px;
+    height: 50px;
+}
+.slides{
+    background-color: blanchedalmond;
+}
