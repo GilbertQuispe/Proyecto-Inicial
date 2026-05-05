@@ -19,7 +19,9 @@ html{
     display: inherit;
     grid-template-rows:10% 85% 5%;    
 }
-
+h3{
+    color: black;
+}
 .hearder_P{
     grid-area:1/1/2/2;
     display: inherit;    
@@ -30,9 +32,11 @@ html{
     font-weight: 300;
 }
 .Header_izquierda{
+    
     display: flex;
+    
 }
-.Header_derecha{
+.Header_derecha{    
     display: flex;
     justify-content: end;
     padding-right: 10%;
@@ -56,6 +60,7 @@ html{
     font-size: 1.6rem;
     font-weight: 300;
     margin: 0 auto;
+    color:hsl(214, 3%, 57%);
 }
 .footer_P{
     grid-area: 3/1/4/2;
@@ -81,7 +86,7 @@ html{
     
 }
 .section_form{
-    display: flex;
+    display: flex;    
     height: 20%;
     justify-content: center;    
 }
@@ -90,10 +95,11 @@ form{
     row-gap: 5%;    
     justify-content: center;
     flex-direction: column;    
-    width: 30%;
+    width: 100%;
 }
 .form_ingreso{
-    height: 3rem;
+    width: 100%;
+    height: 3.5rem;
     
 }
 .boton_ingreso{
@@ -115,10 +121,15 @@ form{
 .icon_reg{
     width: 60px;
     height: 60px;
+    background-color: white;
+    border:1px solid hsl(214, 3%, 57%);
+    border-radius: 5px;
 }
-.slides{
-    background-color: blanchedalmond;
+.icon_reg:hover{
+    border:1px solid #0075e3;
+    background-color:lab(89.06% -0.27 -2.31);
 }
+
 .section-registrese{
     height: 10%;
     /* display: flex;
@@ -134,7 +145,7 @@ form{
 .separator::after {
   content: '';
   flex: 1;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid hsl(214, 3%, 57%);
 }
 
 .separator:not(:empty)::before {
@@ -150,16 +161,28 @@ form{
     color:hsl(214, 3%, 57%);
 }
 .input_ingreso:{
-    border:1px solid hsl(214, 3%, 57%) ;
+    border:1px solid hsl(214, 3%, 57%);
 }
 .input_ingreso:focus{
-    border:2px solid #0075e3 ;    
+    border:2px solid #0075e3;    
     outline: none; 
     border-radius: 5px;
     color: #0075e3;
 }
-/* .input_ingreso:hover{
-    border:1px solid #0075e3 ;   
-    border-color: #0056b3;
-    
-} */
+
+.span-ingreso{
+    color: black;
+    font-weight: bolder;
+    width: 100%;
+}
+.slides{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slides-contenedor{
+    width: 95%;
+    height: 95%;
+    border-radius: 1%;   
+    background-color: #d6daf2;
+}
