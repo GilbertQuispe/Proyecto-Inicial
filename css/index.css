@@ -6,43 +6,44 @@
 html{
     font-size: 62.5%;
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;     */
-    font-family: "Circular";    
-    
+    font-family: "Circular";
+
 }
 .container_principal{
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 50%);
 }
 .Registro{
     display: inherit;
-    grid-template-rows:10% 85% 5%;    
+    grid-template-rows:10% 85% 5%;
 }
 h3{
     color: black;
 }
 .hearder_P{
     grid-area:1/1/2/2;
-    display: inherit;    
-    grid-template-columns: repeat(2, 50%);    
+    display: inherit;
+    grid-template-columns: repeat(2, 50%);
     align-items: center;
     padding-left: 5%;
     font-size: 1.6rem;
     font-weight: 300;
 }
 .Header_izquierda{
-    
+
     display: flex;
-    
+    justify-content: start;
+    align-items: center;
 }
-.Header_derecha{    
+.Header_derecha{
     display: flex;
     justify-content: end;
     padding-right: 10%;
     font-size: 1.3rem;
     font-weight: 300;
-    color:hsl(214, 3%, 57%);   
+    color:hsl(214, 3%, 57%);
 }
 .boton_header{
     width: 120px;
@@ -51,8 +52,14 @@ h3{
     border: 1px solid hsl(214, 3%, 57%);
     border-radius: 5px;
 }
+.texto_logo{
+    text-decoration: none;
+    font-weight: bold;
+    list-style: none;
+}
 .boton_header:hover{
-    background-color: lab(89.06% -0.27 -2.31);      
+    background-color: lab(89.06% -0.27 -2.31);
+    border: 1px solid #0075e3;
 }
 .main_P{
     place-content: center;
@@ -65,15 +72,15 @@ h3{
 .footer_P{
     grid-area: 3/1/4/2;
     display: inherit;
-    grid-template-columns: repeat(2, 50%);    
+    grid-template-columns: repeat(2, 50%);
     align-items: center;
     padding-left: 5%;
     font-size: 1.3rem;
     font-weight: 300;
-    color:hsl(214, 3%, 57%); 
+    color:hsl(214, 3%, 57%);
 }
 .section_m{
-    text-align: center;    
+    text-align: center;
     justify-content: center;
 }
 
@@ -83,24 +90,26 @@ h3{
     display: flex;
     justify-content: space-between ;
     /* grid-template-columns: repeat(4, 25%); */
-    
+
 }
 .section_form{
-    display: flex;    
+    display: flex;
     height: 20%;
-    justify-content: center;    
+    justify-content: center;
 }
 form{
-    display: grid;
-    row-gap: 5%;    
-    justify-content: center;
-    flex-direction: column;    
+    display: flex;
+    row-gap: 5%;
+    justify-content: start;
+    flex-direction: column;
     width: 100%;
 }
 .form_ingreso{
     width: 100%;
-    height: 3.5rem;
-    
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+
 }
 .boton_ingreso{
     height: 40px;
@@ -108,6 +117,9 @@ form{
     color: white;
     border:  1px solid #d6daf2;
     border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .boton_ingreso:hover{
      background-color: #02519b;
@@ -116,7 +128,7 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 .icon_reg{
     width: 60px;
@@ -138,7 +150,7 @@ form{
 .separator {
   display: flex;
   align-items: center;
-  text-align: center;  
+  text-align: center;
 }
 
 .separator::before,
@@ -164,8 +176,8 @@ form{
     border:1px solid hsl(214, 3%, 57%);
 }
 .input_ingreso:focus{
-    border:2px solid #0075e3;    
-    outline: none; 
+    border:2px solid #0075e3;
+    outline: none;
     border-radius: 5px;
     color: #0075e3;
 }
@@ -174,15 +186,29 @@ form{
     color: black;
     font-weight: bolder;
     width: 100%;
+    text-align: start;
+
 }
-.slides{    
+.footer_derecha{
+    text-align: end;
+    /* font-size: 1.3rem; */
+    font-weight: 400;
+    color: black;
+    padding-right: 10%;
+}
+.slides{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+    border-radius: 1%;
 }
-.slides-contenedor{
+.imagen_derecha{
     width: 95%;
-    height: 95%;
-    border-radius: 1%;   
-    background-color: #d6daf2;
+    height: 95%;    
+    background-position:initial;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 2%;       
 }
