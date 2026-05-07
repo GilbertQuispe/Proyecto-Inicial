@@ -1,0 +1,218 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;     */
+    font-family: "Circular";
+
+}
+.container_principal{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+.Registro{
+    display: inherit;
+    grid-template-rows:10% 85% 5%;
+}
+h3{
+    color: black;
+}
+.hearder_P{
+    grid-area:1/1/2/2;
+    display: inherit;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    padding-left: 5%;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.Header_izquierda{
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.Header_derecha{
+    display: flex;
+    justify-content: end;
+    padding-right: 10%;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color:hsl(214, 3%, 57%);
+}
+.boton_header{
+    width: 120px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid hsl(214, 3%, 57%);
+    border-radius: 5px;
+}
+.texto_logo{
+    text-decoration: none;
+    font-weight: bold;
+    list-style: none;
+}
+.boton_header:hover{
+    background-color: lab(89.06% -0.27 -2.31);
+    border: 1px solid #0075e3;
+}
+.main_P{
+    place-content: center;
+    grid-area: 2/1/3/2;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0 auto;
+    color:hsl(214, 3%, 57%);
+}
+.footer_P{
+    grid-area: 3/1/4/2;
+    display: inherit;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    padding-left: 5%;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color:hsl(214, 3%, 57%);
+}
+.section_m{
+    text-align: center;
+    justify-content: center;
+}
+
+.botones_registro{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between ;
+    /* grid-template-columns: repeat(4, 25%); */
+
+}
+.section_form{
+    display: flex;
+    height: 30%;
+    justify-content: center;
+}
+form{
+    display: flex;
+    row-gap: 5%;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+}
+.form_ingreso{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.boton_ingreso{
+    height: 40px;
+    background-color: #0075e3;
+    color: white;
+    border:  1px solid #d6daf2;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.boton_ingreso:hover{
+     background-color: #02519b;
+}
+.Boton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon_reg{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border:1px solid hsl(214, 3%, 57%);
+    border-radius: 5px;
+}
+.icon_reg:hover{
+    border:1px solid #0075e3;
+    background-color:lab(89.06% -0.27 -2.31);
+}
+
+.section-registrese{
+    height: 10%;
+    /* display: flex;
+    place-content: center; */
+}
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid hsl(214, 3%, 57%);
+}
+
+.separator:not(:empty)::before {
+  margin-right: 1rem;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 1rem;
+}
+.boton-texto{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color:hsl(214, 3%, 57%);
+}
+.input_ingreso:{
+    border:1px solid hsl(214, 3%, 57%);
+}
+.input_ingreso:focus{
+    border:2px solid #0075e3;
+    outline: none;
+    border-radius: 5px;
+    color: #0075e3;
+}
+
+.span-ingreso{
+    color: black;
+    font-weight: bolder;
+    width: 100%;
+    text-align: start;
+}
+.Section-form-span{
+    font-size: 1.3rem;
+    text-align: end;
+}
+.footer_derecha{
+    text-align: end;
+    /* font-size: 1.3rem; */
+    font-weight: 400;
+    color: black;
+    padding-right: 10%;
+}
+
+.slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 1%;
+}
+.imagen_derecha{
+    width: 95%;
+    height: 95%;    
+    background-position:initial;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 2%;       
+}
