@@ -1,0 +1,225 @@
+:root {
+    --primary-blue: #007bff; /* Azul principal */
+    --secondary-blue: #0056b3; /* Azul más oscuro */
+    --light-blue: #87CEEB;   /* Celeste */
+    --background-blue: #e9ecef; /* Un azul muy pálido para el fondo */
+    --text-color: #333;      /* Color de texto principal */
+    --white: #fff;
+    --gray: #ccc;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+    overflow: hidden; /* Evita barras de scroll si hay elementos flotantes */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden; /* Para contener los efectos */
+}
+
+/* Efecto de fondo sutil (opcional) */
+.login-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, var(--primary-blue), var(--light-blue));
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-blue);
+    object-fit: cover;
+    z-index: 1;
+    position: relative; /* Asegura que esté por encima del pseudo-elemento */
+}
+
+.upload-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: var(--light-blue);
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid var(--gray);
+    outline: none;
+    font-size: 1.1em;
+    color: var(--text-color);
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: var(--gray);
+    transition: all 0.3s ease;
+    pointer-events: none; /* Para que el clic pase al input */
+}
+
+.input-group input:focus {
+    border-bottom-color: var(--primary-blue);
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 0.9em;
+    color: var(--primary-blue);
+}
+
+.input-group input:not(:placeholder-shown) {
+    /* Opcional: Si el input ya tiene valor, movemos la etiqueta */
+    top: -20px;
+    font-size: 0.9em;
+    color: var(--primary-blue);
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.input-group input:focus ~ .underline {
+    width: 100%;
+}
+
+.login-button {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.login-button:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-2px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--secondary-blue);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .upload-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    .input-group input {
+        font-size: 1em;
+    }
+
+    .login-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
